@@ -15,3 +15,9 @@ Loggbok
   Börjat på en egen Arduino kod
   
   Mekat med bilen för att försöka undvika att sladdar ramlar bort när den rör sig
+  
+2020-03-27
+  
+  Arbetat med miniprojektet
+  
+2020-03-27
