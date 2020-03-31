@@ -20,4 +20,7 @@ Loggbok
   
   Arbetat med miniprojektet
   
-2020-03-27
+2020-03-31
+
+  Pythonprojekt, fått första delen att fungera
+  Fixat mqtt, kopplat bilen så att allt utom styrmekanismen fungerar med den färdiga koden. 
