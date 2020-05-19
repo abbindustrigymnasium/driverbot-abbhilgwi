@@ -24,3 +24,10 @@ Loggbok
 
   Pythonprojekt, fått första delen att fungera
   Fixat mqtt, kopplat bilen så att allt utom styrmekanismen fungerar med den färdiga koden. 
+  
+  ----CORONA M. MOTIVATIONSPROBLEM----
+  
+  2020-05-15
+  
+    Pythonprojektet är avklarat och inlämnat
+    Bilen fungerar enligt färdigskriven kod och hemsidans design har förändrats något
