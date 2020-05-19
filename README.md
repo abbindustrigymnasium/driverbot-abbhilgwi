@@ -8,6 +8,7 @@ Loggbok
   Sett introdktionsfilmerna
   
   Börjat med bilprojektet genom att läsa igenom befintlig kod och försöka förstå
+  
   Arbetat med pythonprojektet och valt ett miniprojekt
   
 2020-03-24
@@ -23,6 +24,7 @@ Loggbok
 2020-03-31
 
   Pythonprojekt, fått första delen att fungera
+  
   Fixat mqtt, kopplat bilen så att allt utom styrmekanismen fungerar med den färdiga koden. 
   
     ----CORONA M. MOTIVATIONSPROBLEM----
@@ -30,4 +32,5 @@ Loggbok
 2020-05-19
 
   Pythonprojektet är avklarat och inlämnat
+  
   Bilen fungerar enligt färdigskriven kod och hemsidans design har förändrats något
