@@ -28,5 +28,6 @@ Loggbok
     ----CORONA M. MOTIVATIONSPROBLEM----
   
 2020-05-19
+
   Pythonprojektet är avklarat och inlämnat
   Bilen fungerar enligt färdigskriven kod och hemsidans design har förändrats något
