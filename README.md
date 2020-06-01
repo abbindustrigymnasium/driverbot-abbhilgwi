@@ -1,6 +1,21 @@
 # driverbot-abbhilgwi
 driverbot-abbhilgwi created by GitHub Classroom
 
+Preliminär plannering - skriven 2020-03-27
+
+* Fokus på microkontrollern
+  * Förstå kod
+  * Anpassa kod
+* Fixa mqtt
+  * Koppla till arduino
+* Hemsidan
+  * Förstå kod
+  * Anpassa kod
+* Skriva egen
+  * Utvärdera delarna, välj kul del
+  * ---- planeras vidare då ----
+
+
 Loggbok
 
 2020-03-23
@@ -34,3 +49,7 @@ Loggbok
   Pythonprojektet är avklarat och inlämnat
   
   Bilen fungerar enligt färdigskriven kod och hemsidans design har förändrats något
+  
+2020-06-02
+
+  Tiden har lagts på att förstå den färdigskrivna koden
