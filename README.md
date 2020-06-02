@@ -78,6 +78,10 @@ Dessa komponenter ingår i denna robotstyrbas
   
   Bilen fungerar enligt färdigskriven kod och hemsidans design har förändrats något
   
-#### 2020-06-02
+#### 2020-06-01
 
   Tiden har lagts på att förstå den färdigskrivna koden
+  
+#### 2020-06-02
+
+ Projektet är klart och inlämnat
