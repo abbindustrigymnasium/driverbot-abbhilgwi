@@ -1,7 +1,7 @@
 # Driverbot - abbhilgwi
 
 ## Vad ingår
-Dessa komponenter ingår i denna robotstyrbas
+Dessa komponenter ingår i driverbotens styrbas
 
  ### App.vue
   I App.vue binds alla komponenter ihop men även en dialogruta finns att klicka upp för att ställa in vilken MQTT broker man ska ansluta   till.
@@ -10,7 +10,7 @@ Dessa komponenter ingår i denna robotstyrbas
   I Buttonsv2.vue finns en mer avancerad styrmöjlighet för att skicka kommandon för fram, bak, vänster och höger, snett upp och snett     ner till mqtt. MQTT topicen är döpt till drive. Det finns fyra knappar för att reglera hastighet.
 
 ### Logger.vue
-  En Komponent som loggar vilka kommandon som skickas över MQTT, vill du själv förbättra den så kan du göra att den läser av kommandon     som även mikrokontrolllen skickar.
+  En Komponent som loggar vilka kommandon som skickas över MQTT
 
 ### store.js
   Här sparas alla viktiga variabler som skickas mellan komponenterna.
