@@ -1,31 +1,37 @@
 #include "EspMQTTClient.h"
+//Install libraries PubSubClient and EspMQTTClient
 #include <Servo.h>
-
-#define motorPinDir  0//D2
-#define motorPinSpeed 5//D1
 
 Servo servo;
 
 void onConnectionEstablished();
 
 EspMQTTClient client(
-  "ASUS",           // Wifi ssid
-  "Svantevante21",           // Wifi password
+  "ABB_Indgym_Guest",           // Wifi ssid
+  "Welcome2abb",           // Wifi password
   "maqiatto.com",  // MQTT broker ip
   1883,             // MQTT broker port
-  "hilda.gwiten@abbindustrigymnasium.se",            // MQTT username
-  "12341234",       // MQTT password
-  "MinRobotbil",          // Client name
+  "joakim.flink@abbindustrigymnasium.se",            // MQTT username
+  "apaapaapa",       // MQTT password
+  "Microdatowwwr2311",          // Client name
   onConnectionEstablished, // Connection established callback
   true,             // Enable web updater
   true              // Enable debug messages
 );
 
 
+#define motorPinRightDir  0//D2
+#define motorPinRightSpeed 5//D1
+
+#define motorPinLeftDir 2
+#define motorPinLeftSpeed 4
+
 void setup() {
   servo.attach(14); //D5
-  pinMode(motorPinDir, OUTPUT);
-  pinMode(motorPinSpeed, OUTPUT);
+  pinMode(motorPinRightDir, OUTPUT);
+  pinMode(motorPinRightSpeed, OUTPUT);
+  pinMode(motorPinLeftDir, OUTPUT);
+  pinMode(motorPinLeftSpeed, OUTPUT);
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, LOW);
   Serial.begin(115200);
@@ -41,37 +47,49 @@ void turn(bool left, int degrees) {
   if (left == true)
   {
     degrees -= 90;
+
     if (degrees < 0)
     {
       degrees = 0;
-      digitalWrite(motorPinDir, 1);
-      analogWrite(motorPinSpeed, 1000);
+      digitalWrite(motorPinLeftDir, 1);
+      analogWrite(motorPinLeftSpeed, 1000);
     }
     servo.write(degrees);
-    Serial.println("Vänster!");
+    Serial.println("Åk Vänster!");
   }
   else
   {
+
     degrees += 90;
     if (degrees > 180)
     {
       degrees = 180;
-      digitalWrite(motorPinDir, 1);
-      analogWrite(motorPinSpeed, 1000);
+      digitalWrite(motorPinLeftDir, 1);
+      analogWrite(motorPinLeftSpeed, 1000);
     }
     servo.write(degrees);
-    Serial.println("Höger!");
+    Serial.println("Åk Höger!");
+
   }
   Serial.println(degrees);
+
+
 }
 
 void drive(bool dir, int speed) {
-  
+
+  //Om du vill åka rakt fram eller bak
   servo.write(90);
+
   Serial.println("Åk!");
+
   Serial.println(speed);
-  digitalWrite(motorPinDir, dir);
-  analogWrite(motorPinSpeed, speed);
+  digitalWrite(motorPinLeftDir, dir);
+  analogWrite(motorPinLeftSpeed, speed);
+
+  digitalWrite(motorPinRightDir, dir);
+  analogWrite(motorPinRightSpeed, speed);
+
   digitalWrite(LED_BUILTIN, dir);
 
 }
@@ -79,8 +97,9 @@ void drive(bool dir, int speed) {
 void onConnectionEstablished()
 {
 
-  client.subscribe("hilda.gwiten@abbindustrigymnasium.se/drive", [] (const String & payload)
+  client.subscribe("joakim.flink@abbindustrigymnasium.se/drive", [] (const String & payload)
   {
+
     char info = payload.charAt(0);
     int length = payload.length();
     String value = payload.substring(1, length);
@@ -103,15 +122,17 @@ void onConnectionEstablished()
 
   });
 
-  client.publish("hilda.gwiten@abbindustrigymnasium.se/drive", "Meddelande 1");
+  client.publish("joakim.flink@abbindustrigymnasium.se/drive", "This is a message");
 
   client.executeDelayed(5 * 1000, []() {
-    client.publish("hilda.gwiten@abbindustrigymnasium.se/drive", "Meddelande 2");
+    client.publish("joakim.flink@abbindustrigymnasium.se/drive", "This is a message sent 5 seconds later");
   });
 }
 
 
 void loop() {
-  
+
+
+  // put your main code here, to run repeatedly:
   client.loop();
 }
