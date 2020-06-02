@@ -28,6 +28,10 @@ Dessa komponenter ingår i denna robotstyrbas
 ### Customize configuration
    See Configuration Reference.
 
+## Psuedokod
+
+[Pseudokod](https://github.com/abbindustrigymnasium/driverbot-abbhilgwi/blob/master/Pseudokod.PNG)
+
 
 ## Preliminär plannering - skriven 2020-03-27
 
